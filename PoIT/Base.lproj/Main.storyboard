@@ -846,13 +846,12 @@
                     </view>
                     <connections>
                         <outlet property="authDescriptionTextView" destination="p1p-1x-SSl" id="abx-ua-NQz"/>
-                        <outlet property="signInButton" destination="lg1-cG-YLP" id="0e7-Rm-0a0"/>
                         <outlet property="signInProgressIndicator" destination="0GL-kt-0EA" id="FtN-dF-xDZ"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="574"/>
+            <point key="canvasLocation" x="75" y="637"/>
         </scene>
     </scenes>
     <resources>

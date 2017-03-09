@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6223A0AF1E70D0CE00869137 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6223A0AE1E70D0CE00869137 /* Person.swift */; };
+		6223A0B31E70D1A300869137 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6223A0B21E70D1A300869137 /* User.swift */; };
+		6223A0B81E70D7CD00869137 /* UserMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6223A0B71E70D7CD00869137 /* UserMockData.swift */; };
 		6272CE6C1E565B3300A29F3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6272CE6B1E565B3300A29F3B /* AppDelegate.swift */; };
 		6272CE6E1E565B3300A29F3B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6272CE6D1E565B3300A29F3B /* SignInViewController.swift */; };
 		6272CE701E565B3300A29F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6272CE6F1E565B3300A29F3B /* Assets.xcassets */; };
 		6272CE731E565B3300A29F3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6272CE711E565B3300A29F3B /* Main.storyboard */; };
+		62930BAB1E7192A300458BC3 /* SerializerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BAA1E7192A300458BC3 /* SerializerDeserializer.swift */; };
+		62930BB01E71990A00458BC3 /* Serialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BAF1E71990A00458BC3 /* Serialize.swift */; };
+		62930BB21E71992500458BC3 /* Deserialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BB11E71992500458BC3 /* Deserialize.swift */; };
+		62930BB41E71AD7000458BC3 /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BB31E71AD7000458BC3 /* UserDefaultStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6223A0AE1E70D0CE00869137 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6223A0B21E70D1A300869137 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6223A0B71E70D7CD00869137 /* UserMockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMockData.swift; sourceTree = "<group>"; };
 		6272CE681E565B3300A29F3B /* PoIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6272CE6B1E565B3300A29F3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6272CE6D1E565B3300A29F3B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6272CE6F1E565B3300A29F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6272CE721E565B3300A29F3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6272CE741E565B3300A29F3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62930BAA1E7192A300458BC3 /* SerializerDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializerDeserializer.swift; sourceTree = "<group>"; };
+		62930BAF1E71990A00458BC3 /* Serialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serialize.swift; sourceTree = "<group>"; };
+		62930BB11E71992500458BC3 /* Deserialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserialize.swift; sourceTree = "<group>"; };
+		62930BB31E71AD7000458BC3 /* UserDefaultStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +61,37 @@
 			isa = PBXGroup;
 			children = (
 				6272CE6B1E565B3300A29F3B /* AppDelegate.swift */,
-				6272CE6D1E565B3300A29F3B /* SignInViewController.swift */,
+				6223A0AC1E70D07000869137 /* SignIn */,
+				6223A0AD1E70D0A700869137 /* Model */,
+				62930BAE1E7198A300458BC3 /* Persistence */,
+				6223A0B61E70D7A800869137 /* Mocks */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		6223A0AC1E70D07000869137 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				6272CE6D1E565B3300A29F3B /* SignInViewController.swift */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
+		6223A0AD1E70D0A700869137 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6223A0AE1E70D0CE00869137 /* Person.swift */,
+				6223A0B21E70D1A300869137 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6223A0B61E70D7A800869137 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6223A0B71E70D7CD00869137 /* UserMockData.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 		6272CE5F1E565B3300A29F3B = {
@@ -75,6 +117,17 @@
 				62025E6E1E5B171E00C4038B /* Resources */,
 			);
 			path = PoIT;
+			sourceTree = "<group>";
+		};
+		62930BAE1E7198A300458BC3 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				62930BAF1E71990A00458BC3 /* Serialize.swift */,
+				62930BB11E71992500458BC3 /* Deserialize.swift */,
+				62930BAA1E7192A300458BC3 /* SerializerDeserializer.swift */,
+				62930BB31E71AD7000458BC3 /* UserDefaultStorage.swift */,
+			);
+			name = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62930BB41E71AD7000458BC3 /* UserDefaultStorage.swift in Sources */,
+				62930BB21E71992500458BC3 /* Deserialize.swift in Sources */,
+				6223A0AF1E70D0CE00869137 /* Person.swift in Sources */,
 				6272CE6E1E565B3300A29F3B /* SignInViewController.swift in Sources */,
+				62930BB01E71990A00458BC3 /* Serialize.swift in Sources */,
 				6272CE6C1E565B3300A29F3B /* AppDelegate.swift in Sources */,
+				62930BAB1E7192A300458BC3 /* SerializerDeserializer.swift in Sources */,
+				6223A0B31E70D1A300869137 /* User.swift in Sources */,
+				6223A0B81E70D7CD00869137 /* UserMockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

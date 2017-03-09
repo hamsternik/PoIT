@@ -1,5 +1,5 @@
 //
-//  Deserializer.swift
+//  Deserialize.swift
 //  PoIT
 //
 //  Created by Nikita Khomitsevich on 3/9/17.
@@ -9,10 +9,9 @@
 import Cocoa
 
 protocol Deserializable {
-    func fromEntry(_ entry: Entry)
+    init(_ entry: Entry)
 }
 
 protocol Deserializer {
-    func deserialize(_ data: Data) -> Entry
-    func deserialize(_ data: Data) -> [Entry]
+    func deserialize(_ data: Data) -> [Entry]?
 }

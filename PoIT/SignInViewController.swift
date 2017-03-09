@@ -8,20 +8,15 @@
 
 import Cocoa
 
+let PoITStorageData = "PoITStorageData"
 
 class SignInViewController: NSViewController {
 
+    var users: [Person]?
+    
     // MARK: Properties
     
-    override var representedObject: Any? {
-        didSet {
-        }
-    }
-    
     @IBOutlet weak var authDescriptionTextView: NSScrollView!
-    
-    @IBOutlet weak var signInButton: NSButton!
-    
     @IBOutlet weak var signInProgressIndicator: NSProgressIndicator!
     
     // MARK: Methods
@@ -29,7 +24,6 @@ class SignInViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signInProgressIndicator.isHidden = true
-        
     }
 
 }

@@ -8,6 +8,13 @@
 
 import Cocoa
 
-class Serialize: NSObject {
+typealias Entry = [String : Any]
 
+protocol Serializible {
+    func toEntry() -> Entry
+}
+
+protocol Serializer {
+    func serialize(_ entry: Entry) -> Data
+    func serialize(_ entries: [Entry]) -> Data
 }

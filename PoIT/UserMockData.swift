@@ -8,6 +8,12 @@
 
 import Cocoa
 
-class UserMockData: NSObject {
+/* Users Mock Data */
+let usersStub: [User] = [
+    User("first", "first", .user),
+    User("second", "second", .user),
+    User("third", "third", .user)
+]
 
-}
+/* Admin Mock Data */
+let adminStub: [User] = [User("admin", "admin", .admin)]
