@@ -30,15 +30,15 @@ class UserDefaultsStorage {
     
     // MARK: Public methods
     
-    func put<T: Serializible>(_ user: T) {
-        let entry = user.toEntry()
+    func put<T: Serializible>(_ object: T) {
+        let entry = object.toEntry()
         self.entries.append(entry)
         let encodedData = SerializerDeserializer.sharedInstance.serialize(self.entries)
         storage.set(encodedData, forKey: UsersTableID)
     }
     
-    func put<T: Serializible>(_ users: [T]) {
-        let entries = users.map { $0.toEntry() }
+    func put<T: Serializible>(_ objects: [T]) {
+        let entries = objects.map { $0.toEntry() }
         self.entries += entries
         let encodedData = SerializerDeserializer.sharedInstance.serialize(self.entries)
         storage.set(encodedData, forKey: UsersTableID)
@@ -79,11 +79,11 @@ class UserDefaultsStorage {
     }
     
     private func getDictValues<T: Deserializable>(from entries: [Entry]) -> [T] {
-        var users = Array<T>()
+        var objects = Array<T>()
         for entry in entries {
-            users.append(T(entry))
+            objects.append(T(entry))
         }
-        return users
+        return objects
     }
     
 }
