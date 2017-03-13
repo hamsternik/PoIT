@@ -50,14 +50,24 @@ class UserDefaultsStorage {
         return getDictValues(from: entries)
     }
     
-    func remove(_ user: User) -> Bool {
-        // TODO: Implement storing into UserDefaults 
-        var users: [User] = getDictValues(from: entries)
-        for ind in 0...users.count {
-            if user == users[ind] {
-                users.remove(at: ind)
+    // TODO: Test both version of the `remove` process
+    func remove<T>(_ object: T) -> Bool where T: Serializible, T: Deserializable, T: Equatable {
+        var objects: [T] = getDictValues(from: entries)
+        
+        // first var.
+        for ind in 0...objects.count {
+            if object == objects[ind] {
+                objects.remove(at: ind)
+                replaceAll(on: objects)
                 return true
             }
+        }
+        
+        // second var.
+        if let index = objects.index(where: { $0 == object }) {
+            objects.remove(at: index)
+            replaceAll(on: objects)
+            return true
         }
         
         print("Storage does not contain passed element.")
@@ -65,11 +75,19 @@ class UserDefaultsStorage {
     }
     
     func removeAll() {
-        // TODO: Implement storing into UserDefaults
         entries.removeAll()
+        let encodedData = SerializerDeserializer.sharedInstance.serialize(entries)
+        storage.set(encodedData, forKey: UsersTableID)
     }
     
     // MARK: Private Methods
+    
+    private func replaceAll<T: Serializible>(on objects: [T]) {
+        let entries = objects.map { $0.toEntry() }
+        self.entries = entries //replace
+        let encodedData = SerializerDeserializer.sharedInstance.serialize(self.entries)
+        storage.set(encodedData, forKey: UsersTableID)
+    }
     
     private func loadEntries() -> [Entry]? {
         if let encodedData = storage.object(forKey: UsersTableID) as? Data {
