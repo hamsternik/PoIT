@@ -18,6 +18,8 @@
 		62930BB01E71990A00458BC3 /* Serialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BAF1E71990A00458BC3 /* Serialize.swift */; };
 		62930BB21E71992500458BC3 /* Deserialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BB11E71992500458BC3 /* Deserialize.swift */; };
 		62930BB41E71AD7000458BC3 /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BB31E71AD7000458BC3 /* UserDefaultStorage.swift */; };
+		62930BBC1E77634D00458BC3 /* PoITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BBB1E77634D00458BC3 /* PoITTests.swift */; };
+		62930BC31E77637300458BC3 /* UserDefaultStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62930BC21E77637300458BC3 /* UserDefaultStorageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +36,21 @@
 		62930BAF1E71990A00458BC3 /* Serialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serialize.swift; sourceTree = "<group>"; };
 		62930BB11E71992500458BC3 /* Deserialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserialize.swift; sourceTree = "<group>"; };
 		62930BB31E71AD7000458BC3 /* UserDefaultStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
+		62930BB91E77634D00458BC3 /* PoITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62930BBB1E77634D00458BC3 /* PoITTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoITTests.swift; sourceTree = "<group>"; };
+		62930BBD1E77634D00458BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62930BC21E77637300458BC3 /* UserDefaultStorageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6272CE651E565B3300A29F3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62930BB61E77634D00458BC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				6272CE6A1E565B3300A29F3B /* PoIT */,
+				62930BBA1E77634D00458BC3 /* PoITTests */,
 				6272CE691E565B3300A29F3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				6272CE681E565B3300A29F3B /* PoIT.app */,
+				62930BB91E77634D00458BC3 /* PoITTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +145,24 @@
 			name = Persistence;
 			sourceTree = "<group>";
 		};
+		62930BBA1E77634D00458BC3 /* PoITTests */ = {
+			isa = PBXGroup;
+			children = (
+				62930BC11E77635A00458BC3 /* Persistence */,
+				62930BBB1E77634D00458BC3 /* PoITTests.swift */,
+				62930BBD1E77634D00458BC3 /* Info.plist */,
+			);
+			path = PoITTests;
+			sourceTree = "<group>";
+		};
+		62930BC11E77635A00458BC3 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				62930BC21E77637300458BC3 /* UserDefaultStorageTests.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +183,23 @@
 			productReference = 6272CE681E565B3300A29F3B /* PoIT.app */;
 			productType = "com.apple.product-type.application";
 		};
+		62930BB81E77634D00458BC3 /* PoITTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62930BBE1E77634D00458BC3 /* Build configuration list for PBXNativeTarget "PoITTests" */;
+			buildPhases = (
+				62930BB51E77634D00458BC3 /* Sources */,
+				62930BB61E77634D00458BC3 /* Frameworks */,
+				62930BB71E77634D00458BC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoITTests;
+			productName = PoITTests;
+			productReference = 62930BB91E77634D00458BC3 /* PoITTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,6 +213,11 @@
 					6272CE671E565B3300A29F3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = C5B4S79D6V;
+						ProvisioningStyle = Automatic;
+					};
+					62930BB81E77634D00458BC3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TVMFX8XPT9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -181,6 +236,7 @@
 			projectRoot = "";
 			targets = (
 				6272CE671E565B3300A29F3B /* PoIT */,
+				62930BB81E77634D00458BC3 /* PoITTests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +248,13 @@
 			files = (
 				6272CE701E565B3300A29F3B /* Assets.xcassets in Resources */,
 				6272CE731E565B3300A29F3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62930BB71E77634D00458BC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +274,15 @@
 				62930BAB1E7192A300458BC3 /* SerializerDeserializer.swift in Sources */,
 				6223A0B31E70D1A300869137 /* User.swift in Sources */,
 				6223A0B81E70D7CD00869137 /* UserMockData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62930BB51E77634D00458BC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62930BC31E77637300458BC3 /* UserDefaultStorageTests.swift in Sources */,
+				62930BBC1E77634D00458BC3 /* PoITTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +420,37 @@
 			};
 			name = Release;
 		};
+		62930BBF1E77634D00458BC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TVMFX8XPT9;
+				INFOPLIST_FILE = PoITTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamsternik.PoITTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		62930BC01E77634D00458BC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TVMFX8XPT9;
+				INFOPLIST_FILE = PoITTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamsternik.PoITTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -368,6 +471,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		62930BBE1E77634D00458BC3 /* Build configuration list for PBXNativeTarget "PoITTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62930BBF1E77634D00458BC3 /* Debug */,
+				62930BC01E77634D00458BC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
